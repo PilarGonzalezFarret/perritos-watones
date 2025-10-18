@@ -77,6 +77,8 @@ footer {
   transform: rotate(-3deg);
   box-shadow: 0 6px 12px rgba(35, 157, 202, 0.2);
   margin: 1rem;
+  max-width: 320px;   
+  width: 100%;   
 }
 
 .video-wrapper {
