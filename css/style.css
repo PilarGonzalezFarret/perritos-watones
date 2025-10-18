@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 30px; /* ajusté esto: 40px es demasiado grande para todo */
+  font-size: 1.5rem; /* ajusté esto: 40px es demasiado grande para todo */
 }
 
 body {
@@ -38,6 +38,8 @@ main {
 
 main h2 {
     font-size: larger;
+    margin-bottom: 1.5rem;
+   color: #03695e; /* ✅ título en verde oscuro */
 }
 
 footer {
@@ -61,26 +63,35 @@ footer {
 .text-content {
   flex: 1;
   min-width: 280px;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   line-height: 1.7;
   color: #03695e; /* ✅ texto más legible y cálido */
 }
 
-.video-wrapper {
-  flex: 1;
-  min-width: 280px;
-  max-width: 320px;
+.video-frame {
+  background-color: #a5c6db; /* crema suave de tu paleta */
+  border: 3px solid #239dca; /* azul cielo, sutil pero definido */
+  border-radius: 16px;
+  padding: 16px;
+  display: inline-block;
   transform: rotate(-3deg);
-  box-shadow: 0 6px 12px rgba(35, 157, 202, 0.2); /* ✅ sombra con tu azul */
-  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(35, 157, 202, 0.2);
+  margin: 1rem;
+}
+
+.video-wrapper {
+  width: 100%;
+  height: auto;
   overflow: hidden;
+  border-radius: 8px;
 }
 
 .video-wrapper video {
   width: 100%;
   height: auto;
   display: block;
-  background-color: #e7e9d8;
+  object-fit: cover;
+  object-position: center;
 }
 
 @media (max-width: 600px) {
@@ -90,6 +101,11 @@ footer {
   .video-wrapper {
     transform: rotate(0);
   } 
+
+  .video-frame {
+    padding: 12px; /* menos espacio en móvil */
+    transform: rotate(0); /* quita la inclinación en móvil */
+  }
 }
 
 /* --- Carrusel de fotos --- */
@@ -98,10 +114,7 @@ footer {
   text-align: center;
 }
 
-.carousel-section h2 {
-  margin-bottom: 1.5rem;
-  color: #03695e; /* ✅ título en verde oscuro */
-}
+
 
 .carousel-container {
   position: relative;
@@ -176,3 +189,29 @@ footer {
     max-height: 350px;
   }
 }
+
+.donaciones h2{
+  display: flex;
+  justify-content: center;
+  }
+
+  .listas {
+    display: flex;
+    justify-content: center;
+    color: #03695e;
+  }
+
+  ul {
+    margin: 0 2.5rem;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+  }
+
+  .rrss {
+    color: #239dca; 
+    width: 4rem;
+    margin-top: 1.5rem;
+  }
